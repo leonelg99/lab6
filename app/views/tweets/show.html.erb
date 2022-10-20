@@ -1,4 +1,16 @@
 <h2 class="py-2 mb-0 ">Tweet</h2>
 
+
+
 <%= render @tweet %>
+<div id="map" style="height: 400px"></div>
+<script>
+  new Mapkick.Map("map", [
+    {
+      latitude: <%= @tweet.location_point.x %>,
+      longitude: <%= @tweet.location_point.y %>
+    }
+  ]);
+</script>
+
 <%= link_to "Imprimir","#", class: "btn", onclick: "window.print()"%>

@@ -1,5 +1,5 @@
 <h2 class="py-2 mb-0">Inicio</h2>
-
+<%@tweets.order(Arel.sql("point (#{session[:lat]}, #{session[:lng]}) <-> location_point"))%>
 <% @tweets.each do |tweet| %>
   <%= render tweet %>
 <% end %>
