@@ -1,0 +1,10 @@
+
+<%= simple_form_for @monster do |m|%>
+    <%= m.error_notification %>
+    <%= m.input :name, placeholder: "Nombre del Monstruo", class: "form-control mb-2" %>
+    <%= m.input :description, class: "form-control mb-2" %>
+    <%= m.input :phone , placeholder: "Numero de Telefono", class: "form-control mb-2" %>
+    <%= m.input :birthdate %>
+    <%= m.input :image, as: :file, input_html: { multiple: false } %>
+    <%= m.submit "Guardar", class: "btn btn-primary mb-2" %>
+<%end%>
